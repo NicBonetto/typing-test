@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto: 100 200 300 400');
+
+header {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.main-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}

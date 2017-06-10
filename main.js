@@ -13,5 +13,5 @@ for (var i = 0; i < text.length; i++) {
 
 document.body.appendChild($div)
 
-var $firstChar = document.getElementsByTagName('span')
+var $firstChar = document.querySelector('span')
 $firstChar.classList.add('current')

@@ -8,3 +8,4 @@ for (var i = 0; i < text.length; i++) {
 }
 
 var $firstChar = document.getElementsByTagName('span')
+$firstChar.className = 'current'

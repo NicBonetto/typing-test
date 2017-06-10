@@ -3,4 +3,5 @@ var text = $text.textContent
 
 for (var i = 0; i < text.length; i++) {
   $char = document.createElement('span')
+  $char.textContent = text[i]
 }

@@ -6,3 +6,5 @@ for (var i = 0; i < text.length; i++) {
   $char.textContent = text[i]
   document.body.appendChild($char)
 }
+
+var $firstChar = document.getElementsByTagName('span')

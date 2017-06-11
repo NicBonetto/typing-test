@@ -21,3 +21,5 @@ function moveCurrent() {
   $currentChar.classList.remove('current')
   $currentChar.nextSibling.classList.add('current')
 }
+
+document.addEventListener('keypress', moveCurrent)

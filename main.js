@@ -15,3 +15,9 @@ document.body.appendChild($div)
 
 var $firstChar = document.querySelector('span')
 $firstChar.classList.add('current')
+
+function moveCurrent() {
+  var $currentChar = document.querySelector('.current')
+  $currentChar.classList.remove('current')
+  $currentChar.nextSibling.classList.add('current')
+}

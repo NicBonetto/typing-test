@@ -21,3 +21,7 @@ header {
 .correct {
   color: DarkSeaGreen;
 }
+
+.wrong {
+  color: Crimson;
+}

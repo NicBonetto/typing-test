@@ -18,11 +18,13 @@ $firstChar.classList.add('current')
 
 function moveCurrent() {
   var $currentChar = document.querySelector('.current')
-  $currentChar.classList.remove('current')
-  if ($currentChar.nextSibling !== null) {
-    $currentChar.nextSibling.classList.add('current')
-  }
+  if ($currentChar !== null) {
+    $currentChar.classList.remove('current')
 
+    if ($currentChar.nextSibling !== null) {
+      $currentChar.nextSibling.classList.add('current')
+    }
+  }
 }
 
 function feedback(event) {
@@ -39,5 +41,7 @@ function feedback(event) {
 
 }
 
-document.addEventListener('keypress', feedback)
-document.addEventListener('keypress', moveCurrent)
+document.addEventListener('keypress', function() {
+  feedback(event);
+  moveCurrent();
+});

@@ -22,4 +22,15 @@ function moveCurrent() {
   $currentChar.nextSibling.classList.add('current')
 }
 
+function feedback(event) {
+  var $current = document.querySelector('.current')
+  var current = $current.textContent
+  if (current === event.key) {
+    $current.classList.add('correct')
+  }
+  else {
+    $current.classList.add('wrong')
+  }
+}
+
 document.addEventListener('keypress', moveCurrent)

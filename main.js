@@ -59,5 +59,6 @@ function score() {
 
 document.addEventListener('keypress', function() {
   feedback(event)
+  score()
   moveCurrent()
 })

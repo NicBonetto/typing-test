@@ -1,6 +1,7 @@
 var text = 'Ben Howard says, \"Oh hey, I wasn\'t listening. I was watching' +
 ' Syria. Blinded by the sunshine strip. You, you were in the kitchen. Oh your' +
 ' mariner\'s mouth was wounded with the wounder\'s whip.\"'
+var correctNum = 0
 
 var $div = document.createElement('div')
 $div.classList.add('text')
@@ -38,10 +39,25 @@ function feedback(event) {
       $current.classList.add('wrong')
     }
   }
+}
 
+function score() {
+  var $current = document.querySelector('.current')
+  if ($current.nextSibling !== null) {
+    if ($current.classList.contains('correct')) {
+       correctNum++
+    }
+  }
+  else {
+    var total = (correctNum / text.length) * 100
+    total = total.toFixed(1)
+    var $newParagraph = document.createElement('p')
+    $newParagraph.textContent = 'You got ' + total + '% correct!'
+    document.body.appendChild($newParagraph)
+  }
 }
 
 document.addEventListener('keypress', function() {
-  feedback(event);
-  moveCurrent();
-});
+  feedback(event)
+  moveCurrent()
+})

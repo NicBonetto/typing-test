@@ -25,3 +25,9 @@ header {
 .wrong {
   color: Crimson;
 }
+
+.score {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15rem;
+}

@@ -33,4 +33,5 @@ function feedback(event) {
   }
 }
 
+document.addEventListener('keypress', feedback)
 document.addEventListener('keypress', moveCurrent)

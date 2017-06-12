@@ -19,18 +19,24 @@ $firstChar.classList.add('current')
 function moveCurrent() {
   var $currentChar = document.querySelector('.current')
   $currentChar.classList.remove('current')
-  $currentChar.nextSibling.classList.add('current')
+  if ($currentChar.nextSibling !== null) {
+    $currentChar.nextSibling.classList.add('current')
+  }
+
 }
 
 function feedback(event) {
   var $current = document.querySelector('.current')
-  var current = $current.textContent
-  if (current === event.key) {
-    $current.classList.add('correct')
+  if ($current !== null) {
+    var current = $current.textContent
+    if (current === event.key) {
+      $current.classList.add('correct')
+    }
+    else {
+      $current.classList.add('wrong')
+    }
   }
-  else {
-    $current.classList.add('wrong')
-  }
+
 }
 
 document.addEventListener('keypress', feedback)

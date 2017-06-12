@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto: 100 200 300 400');
+@import url('https://fonts.googleapis.com/css?family=Roboto: 100 200 300 400 500 600');
 
 header {
   font-family: 'Roboto', sans-serif;
@@ -6,8 +6,14 @@ header {
   letter-spacing: 2px;
 }
 
-.main-text {
+.text {
+  text-align: center;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
+}
+
+.current {
+  font-weight: 600;
+  font-size: 20px;
 }

@@ -52,6 +52,7 @@ function score() {
     var total = (correctNum / text.length) * 100
     total = total.toFixed(1)
     var $newParagraph = document.createElement('p')
+    $newParagraph.classList.add('score')
     $newParagraph.textContent = 'You got ' + total + '% correct!'
     document.body.appendChild($newParagraph)
   }
